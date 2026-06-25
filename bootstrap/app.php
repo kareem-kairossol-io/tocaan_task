@@ -1,5 +1,6 @@
 <?php
 
+use App\Exceptions\BusinessRuleException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -27,6 +28,15 @@ return Application::configure(basePath: dirname(__DIR__))
         );
     })
     ->withExceptions(function (Exceptions $exceptions): void {
+        $exceptions->render(
+            function (BusinessRuleException $exception, Request $request) {
+                return response()->json([
+                    'success' => false,
+                    'message' => $exception->getMessage(),
+                    'data' => null,
+                ], $exception->status());
+            }
+        );
         $exceptions->shouldRenderJsonWhen(
             fn (Request $request, Throwable $exception): bool =>
                 $request->is('api/*') || $request->expectsJson()
