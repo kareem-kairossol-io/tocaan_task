@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "1e6e2ec4-b501-4cd2-9ef0-0b485c24c3da",
+    "_postman_id": "c1625b0b-8da2-4a5c-8556-a145119f9431",
     "name": "tocaan_task",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "43931619",
-    "_collection_link": "https://go.postman.co/collection/43931619-1e6e2ec4-b501-4cd2-9ef0-0b485c24c3da?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/43931619-c1625b0b-8da2-4a5c-8556-a145119f9431?source=collection_link"
   },
   "item": [
     {
@@ -25,15 +25,10 @@
               }
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/auth/register",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/auth/register",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "auth",
@@ -57,15 +52,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/register",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/register",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -132,15 +122,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/register",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/register",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -207,15 +192,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/register",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/register",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -292,15 +272,10 @@
               }
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/auth/login",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/auth/login",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "auth",
@@ -324,15 +299,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/login",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/login",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -399,15 +369,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/login",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/login",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -474,15 +439,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/login",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/login",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -549,15 +509,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/login",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/login",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -625,7 +580,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": ""
+              "raw": "{{base_url}}/api/auth/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
             }
           },
           "response": [
@@ -641,15 +604,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/me",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/me",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -705,15 +663,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/me",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/me",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -775,15 +728,10 @@
               "raw": ""
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/auth/refresh",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/auth/refresh",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "auth",
@@ -808,15 +756,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/refresh",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/refresh",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -884,15 +827,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/refresh",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/refresh",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -968,15 +906,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/refresh",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/refresh",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -1046,15 +979,10 @@
               "raw": ""
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/auth/logout",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/auth/logout",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "auth",
@@ -1079,15 +1007,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/logout",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/logout",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -1147,15 +1070,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/auth/logout",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/auth/logout",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "auth",
@@ -1232,15 +1150,10 @@
               }
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders"
@@ -1274,15 +1187,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1322,15 +1230,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1375,15 +1278,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1428,15 +1326,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1469,15 +1362,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders"
@@ -1497,15 +1385,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1536,15 +1419,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders?status=pending&per_page=1&page=1",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders?status=pending&per_page=1&page=1",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders"
@@ -1592,15 +1470,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders/{{order_id}}",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders",
@@ -1621,15 +1494,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1661,15 +1529,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{other_user_order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{other_user_order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1717,15 +1580,10 @@
               }
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders/{{order_id}}",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders",
@@ -1760,15 +1618,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1814,15 +1667,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1868,15 +1716,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1922,15 +1765,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{paid_order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{paid_order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -1964,15 +1802,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders/{{order_id}}",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders",
@@ -1993,15 +1826,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2033,15 +1861,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_with_payment_id}}",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_with_payment_id}}",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2080,15 +1903,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/payment-methods",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/payment-methods",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "payment-methods"
@@ -2108,15 +1926,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/payment-methods",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/payment-methods",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "payment-methods"
@@ -2141,15 +1954,10 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/payment-methods",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/payment-methods",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "payment-methods"
@@ -2182,15 +1990,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/payments",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/payments",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "payments"
@@ -2210,15 +2013,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "payments"
@@ -2249,15 +2047,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/payments?status=failed&method=paypal&per_page=1&page=1",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/payments?status=failed&method=paypal&per_page=1&page=1",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "payments"
@@ -2308,15 +2101,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/payments?status=invalid_status&method=bitcoin",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/payments?status=invalid_status&method=bitcoin",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "payments"
@@ -2359,15 +2147,10 @@
               }
             ],
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}/payments",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders/{{order_id}}/payments",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders",
@@ -2389,15 +2172,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2430,15 +2208,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{order_id}}/payments?status=failed&method=paypal&per_page=15&page=1",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{order_id}}/payments?status=failed&method=paypal&per_page=15&page=1",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2491,15 +2264,10 @@
                   }
                 ],
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{other_user_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{other_user_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2548,15 +2316,10 @@
               }
             },
             "url": {
-              "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
               "host": [
-                "127",
-                "0",
-                "0",
-                "1"
+                "{{base_url}}"
               ],
-              "port": "8000",
               "path": [
                 "api",
                 "orders",
@@ -2592,15 +2355,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2647,15 +2405,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2702,15 +2455,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2757,15 +2505,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2812,15 +2555,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{pending_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{pending_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2867,15 +2605,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{cancelled_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{cancelled_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2922,15 +2655,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{paid_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{paid_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -2977,15 +2705,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{other_user_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{other_user_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -3027,15 +2750,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -3082,15 +2800,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{confirmed_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{confirmed_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
@@ -3137,15 +2850,10 @@
                   }
                 },
                 "url": {
-                  "raw": "http://127.0.0.1:8000/api/orders/{{retry_order_id}}/payments",
-                  "protocol": "http",
+                  "raw": "{{base_url}}/api/orders/{{retry_order_id}}/payments",
                   "host": [
-                    "127",
-                    "0",
-                    "0",
-                    "1"
+                    "{{base_url}}"
                   ],
-                  "port": "8000",
                   "path": [
                     "api",
                     "orders",
