@@ -2,6 +2,7 @@
 
 use App\Exceptions\BusinessRuleException;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -11,6 +12,7 @@ use Illuminate\Validation\ValidationException;
 use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
 use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenExpiredException;
 use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenInvalidException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -125,6 +127,38 @@ return Application::configure(basePath: dirname(__DIR__))
                     'success' => false,
                     'message' => 'Token is missing or could not be parsed.',
                 ], 401);
+            }
+        );
+        $exceptions->render(
+            function (
+                NotFoundHttpException $exception,
+                Request $request
+            ) {
+                if (! $request->is('api/*')) {
+                    return null;
+                }
+
+                $previousException = $exception->getPrevious();
+
+                if ($previousException instanceof ModelNotFoundException) {
+                    $model = $previousException->getModel();
+
+                    $modelName = $model
+                        ? Str::headline(class_basename($model))
+                        : 'Resource';
+
+                    return response()->json([
+                        'success' => false,
+                        'message' => "{$modelName} not found.",
+                        'data' => null,
+                    ], 404);
+                }
+
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Endpoint not found.',
+                    'data' => null,
+                ], 404);
             }
         );
     })->create();
