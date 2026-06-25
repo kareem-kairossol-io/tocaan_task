@@ -8,12 +8,34 @@ use App\Exceptions\OrderHasPaymentsException;
 use App\Exceptions\PaidOrderCannotBeModifiedException;
 use App\Models\Order;
 use App\Models\User;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class OrderService
 {
+    public function paginate(User $user, array $filters): LengthAwarePaginator
+    {
+        return $user->orders()
+            ->with('items')
+            ->when(
+                $filters['status'] ?? null,
+                fn ($query, string $status) =>
+                $query->where('status', $status)
+            )
+            ->latest()
+            ->paginate($filters['per_page'] ?? 15)
+            ->withQueryString();
+    }
+
+    public function find(User $user, int $orderId): Order
+    {
+        return $user->orders()
+            ->with('items')
+            ->findOrFail($orderId);
+    }
+
     public function create(User $user, array $data): Order
     {
         return DB::transaction(function () use ($user, $data): Order {
