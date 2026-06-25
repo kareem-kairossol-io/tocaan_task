@@ -4,26 +4,37 @@ namespace App\Payments;
 
 use App\Contracts\PaymentGateway;
 use App\Exceptions\UnsupportedPaymentMethodException;
-use App\Payments\Gateways\CreditCardGateway;
-use App\Payments\Gateways\PayPalGateway;
+use LogicException;
 
 class PaymentGatewayFactory
 {
-    /**
-     * @var array<string, class-string<PaymentGateway>>
-     */
-    private const GATEWAYS = [
-        'credit_card' => CreditCardGateway::class,
-        'paypal' => PayPalGateway::class,
-    ];
-
     public function make(string $method): PaymentGateway
     {
-        $gatewayClass = self::GATEWAYS[$method]
-            ?? throw new UnsupportedPaymentMethodException($method);
+        /** @var array<string, mixed>|null $gatewayConfig */
+        $gatewayConfig = config("payments.gateways.{$method}");
+
+        if ($gatewayConfig === null) {
+            throw new UnsupportedPaymentMethodException($method);
+        }
+
+        $gatewayClass = $gatewayConfig['driver'] ?? null;
+
+        if (
+            ! is_string($gatewayClass)
+            || ! is_subclass_of($gatewayClass, PaymentGateway::class)
+        ) {
+            throw new LogicException(
+                "Invalid payment gateway driver configured for [{$method}]."
+            );
+        }
+
+        unset($gatewayConfig['driver']);
 
         /** @var PaymentGateway $gateway */
-        $gateway = app($gatewayClass);
+        $gateway = app()->makeWith(
+            $gatewayClass,
+            ['config' => $gatewayConfig]
+        );
 
         return $gateway;
     }
@@ -33,6 +44,6 @@ class PaymentGatewayFactory
      */
     public function availableMethods(): array
     {
-        return array_keys(self::GATEWAYS);
+        return array_keys(config('payments.gateways', []));
     }
 }

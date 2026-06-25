@@ -17,7 +17,11 @@ class PaymentGatewayTest extends TestCase
     {
         $order = $this->makeOrder(total: 250.50);
 
-        $result = (new CreditCardGateway())->charge($order);
+        $result = (new CreditCardGateway([
+            'api_key' => 'test-credit-card-key',
+            'secret' => 'test-credit-card-secret',
+            'sandbox' => true,
+        ]))->charge($order);
 
         $this->assertInstanceOf(PaymentResult::class, $result);
         $this->assertTrue($result->successful);
@@ -47,7 +51,11 @@ class PaymentGatewayTest extends TestCase
     {
         $order = $this->makeOrder(total: 300);
 
-        $result = (new PayPalGateway())->charge($order);
+        $result = (new PayPalGateway([
+            'client_id' => 'test-paypal-client-id',
+            'client_secret' => 'test-paypal-client-secret',
+            'sandbox' => true,
+        ]))->charge($order);
 
         $this->assertInstanceOf(PaymentResult::class, $result);
         $this->assertFalse($result->successful);
